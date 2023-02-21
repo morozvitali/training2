@@ -1,4 +1,15 @@
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class FileNavigator {
+    FileData fd = new FileData("kjhvkjv", "uyftitf");
+
+    //public static HashMap <K,V> = new HashMap <> ();
+
+
+    // V - ArrayList of FileData ???/
+
     //++1 Створити клас FileNavigator.
 
     // Клас призначений для зберігання списку файлів,
@@ -9,15 +20,19 @@ public class FileNavigator {
     //Наприклад: /path/to/file-> [files.txt, firstApp.java]
 
 
-    public void add (String PATH) {
+
+    public void add (String path) {
+        // створюємо файл, в нас є шлях і назва
+
+        //Якщо запис вже існує то додати файл (обєкт) до переліку з файлами у масиві шляхів
 
         //2. Реалізувати метод add у класі FileNavigator.
         // Цей метод додає файл за вказаним шляхом.
 
-        boolean createNewFile () {
+       // boolean createNewFile () {
             /** створює новий файл по шляху, який переданий в конструктор.
             У разі вдалого створення повертає true, інакше false **/
-        }
+        //}
 
         // Якщо шлях вже існує, новий файл необхідно додати
         // до списку (List!) stаtic класу,
