@@ -1,56 +1,62 @@
-//import java.nio.file.Files;
-//import java.io.File;
-//public class FileData {
-//1. Створити клас FileData.
-// Клас представляє конкретний файл і складається з:
-// ім'я файлу, розміру в байтах, шлях до файлу.
-//
-//    private String name;
-//    private byte size;
-//    private String path;
-//
-//    //конструктор
-//
-//    public FileData() {
-//        this.name = name;
-//        this.path = path;
-//    }
-
-
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
 
-public class FileData {
-    public FileData(String name, String pathname) {
+public class FileData extends File {
+
+    public static void main(String[] args) {
+        FileData fd = new FileData("txt.txt");
 
 
-        //public static void main(String[] args) {
-// створимо дані обєкту
-        File myFile = new File("C://SomeDir//notes.txt");
-        System.out.println("File name: " + myFile.getName());
-        System.out.println("Parent folder: " + myFile.getParent());
-        if (myFile.exists())
-            System.out.println("File exists");
-        //else
-        //    System.out.println("File not found");
-        //System.out.println("File size: " + myFile.length());
-        //if (myFile.canRead())
-        //    System.out.println("File can be read");
-        //else
-        //    System.out.println("File can not be read");
-        //if (myFile.canWrite())
-        //    System.out.println("File can be written");
-        //else
-        //    System.out.println("File can not be written");
-// створимо цей обєкт
-        File newFile = new File("C://SomeDir//MyFile");
+        // тут создали
         try {
-            boolean created = newFile.createNewFile();
-            if (created)
-                System.out.println("File has been created");
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
+            fd.createNewFile();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
+
+        // тут назва файла
+        System.out.println(fd.getName());
+
+        //повернути щлях до файлу з фалйом
+        fd.getPath();
+
+        // повернути шлях ббез імені файлу
+        fd.getParent();
+
+        //повернути розмір у лонг але треба бьайт
+        fd.getTotalSpace();
+
+        // що робить невідомо        fd.list();
+        // невідомо але схоже треба         fd.length();
+        //
+
+
+
+        // тут удалили
+        fd.delete();
+
+        // тут читали
+        //https://javadevblog.com/kak-sozdat-novyj-fajl-v-java.html
+    }
+
+
+
+
+    public FileData(String pathname) {
+        super(pathname);
+    }
+
+    public FileData(String parent, String child) {
+        super(parent, child);
+    }
+
+    public FileData(File parent, String child) {
+        super(parent, child);
+    }
+
+    public FileData(URI uri) {
+        super(uri);
     }
 }
 

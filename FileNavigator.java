@@ -1,9 +1,18 @@
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class FileNavigator {
-    FileData fd = new FileData("kjhvkjv", "uyftitf");
+//    FileData fd;
+//
+//    {
+//        try {
+//            fd = new FileData("kjhvkjv");
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
 
     //public static HashMap <K,V> = new HashMap <> ();
 
