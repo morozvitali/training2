@@ -1,41 +1,34 @@
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class FileNavigator {
-//    FileData fd;
-//
-//    {
-//        try {
-//            fd = new FileData("kjhvkjv");
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
+public class FileNavigator extends HashMap <String,ArrayList<FileData>[]> {
+    private final String pathName;
+    private ArrayList<FileData>[] list;
 
-    //public static HashMap <K,V> = new HashMap <> ();
+    public FileNavigator (String pathName, ArrayList<FileData>[] list) {
+        this.pathName = pathName;
+        this.list = list;
+    }
+    public void add (String pathName) {
 
 
-    // V - ArrayList of FileData ???/
+            if (this.pathName.contains(pathName)) {
+            FileData fd =
+            fd.fileName = fd.getName(); ///???
+            list.add (new FileData(pathName));
+            } else{
+            //якщо ключа не існує то створюємо арей ліст як ключ
+            //                  додаємо файл до аррей листу
 
-    //++1 Створити клас FileNavigator.
+            ArrayList <FileData> [] keyArray = new ArrayList[]{};
+            hashMap.put(pathName, keyArray.add(new FileData(pathName)));
+            key.add(new FileData(pathName));
+        }
 
-    // Клас призначений для зберігання списку файлів,
-    // які розташовані на конкретному шляху.
-
-    /** зробити list map для зберігання ключ значення унікального **/
-
-    //Наприклад: /path/to/file-> [files.txt, firstApp.java]
-
-
-
-    public void add (String path) {
         // створюємо файл, в нас є шлях і назва
-
-        //Якщо запис вже існує то додати файл (обєкт) до переліку з файлами у масиві шляхів
-
-        //2. Реалізувати метод add у класі FileNavigator.
+        // Якщо запис вже існує то додати файл (обєкт)
+        // до переліку з файлами у масиві шляхів
+        // 2. Реалізувати метод add у класі FileNavigator.
         // Цей метод додає файл за вказаним шляхом.
 
        // boolean createNewFile () {

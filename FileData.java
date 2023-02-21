@@ -4,6 +4,11 @@ import java.net.URI;
 
 public class FileData extends File {
 
+    String fileName;
+    String filePath;
+    byte size;
+
+
     public static void main(String[] args) {
         FileData fd = new FileData("txt.txt");
 
